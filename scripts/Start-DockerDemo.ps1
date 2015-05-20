@@ -18,7 +18,7 @@ docker rm -f ra
 docker rm -f mysql
 
 # Start building commands
-docker run --name mysql -e MYSQL_ROOT_PASSWORD=cademo -d mysql
-docker run -it --name ra  --link mysql:mysql -v //E:/Source:/opt/share ubuntu:14.04
+docker run --name mysql -e MYSQL_ROOT_PASSWORD=cademo -d mysql 
+docker run -it --name ra  --link mysql:mysql -v //C/Users:/opt ubuntu:14.04 bin/bash
 
 ####
