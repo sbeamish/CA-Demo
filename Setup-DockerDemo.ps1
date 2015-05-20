@@ -21,3 +21,9 @@ boot2docker start
 #docker top silly_payne
 
 #docker inspect silly_payne
+
+
+# Setup Docker Demo commands
+#docker pull mysql
+#docker pull devtest latest
+#docker pull rademo latest
