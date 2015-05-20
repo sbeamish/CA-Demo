@@ -6,8 +6,11 @@ $Env:DOCKER_TLS_VERIFY = "1"
 
 boot2docker start
 
+# run interactively
 #docker run -t -i ubuntu:14.04 echo 'Hello World'
+#docker run -t -i ubuntu:14.04 /bin/bash
 
+# run as a daemon
 #docker run -d -P training/webapp python app.py
 
 #boot2docker ip
@@ -27,3 +30,6 @@ boot2docker start
 #docker pull mysql
 #docker pull devtest latest
 #docker pull rademo latest
+
+#docker run -d ubuntu:14.04 /bin/bash
+#docker run -d mysql /bin/bash
