@@ -13,12 +13,14 @@ boot2docker start
 
 #remove existing names
 Write-Host
-Write-host "Removing any pre-existing container tags"
+Write-host "Stop/remove any pre-existing container tags"
+
+docker stop ra
+docker stop mysql
+
 docker rm -f ra
 docker rm -f mysql
 
 # Start building commands
 docker run --name mysql -e MYSQL_ROOT_PASSWORD=cademo -d mysql 
-docker run -it --name ra  --link mysql:mysql -v //C/Users:/opt ubuntu:14.04 bin/bash
-
-####
+docker run -it --name ra --link mysql:mysql -p 8080:8080 -v /c/Users:/mnt ubuntu:14.04 bin/bash
