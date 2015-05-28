@@ -12,4 +12,4 @@ docker login –u %uname% –p pword –e %email%
 
 docker pull caiw/devtest:8.0.2
 docker pull caiw/jboss
-docker pull/cms
+docker pull caiw/cms
